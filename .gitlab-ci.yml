@@ -1,0 +1,30 @@
+before_script:
+       - SET SH_HOME=C:\cygwin64
+       - SET JAVA_HOME=C:\Program Files (x86)\Java\jdk-14.0.2\jdk-14.0.2
+
+
+test:
+    stage: test
+    script:
+        - call ./bin/startup.bat       
+    tags:
+        - cyclos
+
+
+deploy_staging:
+  stage: deploy
+  script:
+    - echo "Deploy to preprod server"
+  environment:
+    name: tomcat_deploy
+    url: http://localhost:8088/cyclos
+  only:
+    - master
+  tags:
+      - cyclos
+
+
+
+
+
+
