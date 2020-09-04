@@ -1,27 +1,58 @@
+stages:
+  - build
+  - test
+  - deploy
+  - deploy_staging
+
 before_script:
        - SET SH_HOME=C:\cygwin64
+       - SET M2_HOME="C:\Program Files (x86)\apache-maven-3.6.3"
+       - SET M2=%M2_HOME%\bin
+       - SET path=%path%;%M2%
        - SET JAVA_HOME=C:\Program Files (x86)\Java\jdk-14.0.2\jdk-14.0.2
+      
 
+build:
+    stage: build
+    script:
+        - mvn test     
+    tags:
+        - cyclos
+      
 
 test:
     stage: test
+    script:
+        - mvn clean install     
+    artifacts:
+      when: always
+      paths:
+        - Result/
+        - target/
+    tags:
+        - cyclos
+
+deploy:
+    stage: deploy
     script:
         - call ./bin/startup.bat       
     tags:
         - cyclos
 
 
+
 deploy_staging:
-  stage: deploy
+  stage: deploy_staging
   script:
-    - echo "Deploy to preprod server"
+    - echo "Deploy"
   environment:
-    name: tomcat_deploy
-    url: http://localhost:8088/cyclos
+    name: tomcat_deploy_cyclos
+    url: http://localhost:8089/cyclos
   only:
     - master
   tags:
       - cyclos
+
 
 
 
