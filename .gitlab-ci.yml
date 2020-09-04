@@ -1,6 +1,4 @@
 stages:
-  - build
-  - test
   - deploy
   - deploy_staging
 
@@ -12,29 +10,12 @@ before_script:
        - SET JAVA_HOME=C:\Program Files (x86)\Java\jdk-14.0.2\jdk-14.0.2
       
 
-build:
-    stage: build
-    script:
-        - mvn test     
-    tags:
-        - cyclos
-      
 
-test:
-    stage: test
-    script:
-        - mvn clean install     
-    artifacts:
-      when: always
-      paths:
-        - Result/
-        - target/
-    tags:
-        - cyclos
 
 deploy:
     stage: deploy
     script:
+        - call ./bin/shutdown.bat
         - call ./bin/startup.bat       
     tags:
         - cyclos
