@@ -1,11 +1,29 @@
+before_script:
+       - SET SH_HOME=C:\cygwin64
+       - SET M2_HOME="C:\Program Files (x86)\apache-maven-3.6.3"
+       - SET M2=%M2_HOME%\bin
+       - SET path=%path%;%M2%
+       - SET JAVA_HOME=C:\Program Files (x86)\Java\jdk-14.0.2\jdk-14.0.2
+
 stages:
+  - build
+  - test 
   - deploy
   - deploy_staging
 
-  
+build:
+    stage: build
+    script:
+        - mvn compile    
+    tags:
+        - cyclos
 
-
-
+test:
+    stage: test
+    script:
+        - mvn clean install    
+    tags:
+        - cyclos
 deploy:
     stage: deploy
     script:
@@ -13,9 +31,6 @@ deploy:
         - call ./bin/startup.bat       
     tags:
         - cyclos
-
-
-
 deploy_staging:
   stage: deploy_staging
   script:
