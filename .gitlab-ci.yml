@@ -37,7 +37,7 @@ deploy_staging:
     - echo "Deploy"
   environment:
     name: tomcat_deploy_cyclos
-    url: http://localhost:8089/cyclos
+    url: http://localhost:8080/cyclos
   only:
     - master
   tags:
