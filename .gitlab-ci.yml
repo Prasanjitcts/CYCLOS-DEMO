@@ -9,6 +9,13 @@ stages:
   - deploy
   - deploy_staging
 
+cleanup_job:
+    stage: cleanup
+    script:
+        - cleanup after jobs
+    when: always
+
+
 deploy:
     stage: deploy
     script:
