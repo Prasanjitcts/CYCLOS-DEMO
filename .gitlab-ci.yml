@@ -10,10 +10,11 @@ stages:
   - deploy
   - deploy_staging
 
-cleanup_job:
+
+cleanup_build_job:
     stage: cleanup
     script:
-        - cleanup after jobs
+        - cleanup build when failed
     when: always
     tags:
         - cyclos
