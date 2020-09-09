@@ -6,18 +6,8 @@ before_script:
        - SET JAVA_HOME=C:\Program Files (x86)\Java\jdk-14.0.2\jdk-14.0.2
 
 stages:
-  - cleanup
   - deploy
   - deploy_staging
-
-
-cleanup_build_job:
-    stage: cleanup
-    script:
-        - cleanup build when failed
-    when: always
-    tags:
-        - cyclos
 
 
 deploy:
