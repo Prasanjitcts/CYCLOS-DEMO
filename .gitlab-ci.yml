@@ -12,7 +12,9 @@ stages:
 deploy:
     stage: deploy
     script:
+        - call ./bin/shutdown.bat
         - call ./bin/startup.bat
+        - exit 1
            
     tags:
         - cyclos
