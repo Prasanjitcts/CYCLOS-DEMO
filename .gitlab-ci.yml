@@ -13,7 +13,6 @@ stages:
 deploy:
     stage: deploy
     script:
-        - call ./bin/shutdown.bat
         - call ./bin/startup.bat
     tags:
         - cyclos
@@ -24,7 +23,7 @@ deploy_staging:
     - echo "Deploy"
   environment:
     name: tomcat_deploy_cyclos
-    url: http://localhost:8080/cyclos
+    url: http://localhost:8000/cyclos
   only:
     - master
   tags:
