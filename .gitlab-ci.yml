@@ -9,17 +9,13 @@ build:
     stage: build
     script:
         - mvn compile       
-    tags:
-        - cyclos
-    
+   
 
 test:
     stage: test
     script:
         - mvn clean install
-    tags:
-        - cyclos
-
+    
 
 
 
