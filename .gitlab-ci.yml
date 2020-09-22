@@ -1,5 +1,6 @@
 before_script:
   - apt-get update
+  - apt install -y maven
 
 stages: 
   - build
