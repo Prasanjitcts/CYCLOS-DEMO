@@ -1,12 +1,17 @@
 
-stages:
-  - test
-
-
-test:
-    script:
-       - chmod 777 ./script.sh
-       - ./script.sh
+jobs:
+- deployment: VMDeploy
+  displayName: web
+  pool:
+    vmImage: 'Ubuntu-16.04'
+  environment:
+    name: cyclos-deployement
+    resourceType: VirtualMachine
+  strategy:
+      runOnce:
+        deploy:
+          steps:
+          - script: ./script.sh
 
     
 
