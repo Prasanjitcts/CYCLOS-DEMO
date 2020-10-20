@@ -312,8 +312,8 @@
 	</dependencies>
  <distributionManagement> 
 <repository>
-  <id>cyclos_</id>
-  <url>https://pkgs.dev.azure.com/prasanjitnaha2020/bdd/_packaging/cyclos_/maven/v1</url>
+  <id>cycloss</id>
+  <url>https://pkgs.dev.azure.com/prasanjitnaha2020/CYCLOS-DEMO/_packaging/cycloss/maven/v1</url>
   <releases>
     <enabled>true</enabled>
   </releases>
