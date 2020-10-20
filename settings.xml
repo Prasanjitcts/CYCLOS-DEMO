@@ -4,7 +4,7 @@
                               https://maven.apache.org/xsd/settings-1.0.0.xsd">
   <servers>
     <server>
-      <id>cyclos_</id>
+      <id>cycloss</id>
       <username>prasanjitnaha2020</username>
       <password>5ow6cbms7iltht325cvx2as74n2g4eukkxsnqw2qd6xrcsyvulkq</password>
     </server>
