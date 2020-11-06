@@ -34,7 +34,7 @@ import java.io.IOException;
         glue = {"sqs.cucumber.hooks",
                 "sqs.cucumber.stepdefinitions"
         },
-        		tags = {"@UserPaymentValidation","@UserPayment_summarized_web"})
+        		tags = {"@UserPaymentValidation"})
        //tags = {"@UserPaymentValidation,@Login,@accounts,@UserPayment_summarized_web,@demo,@users"})
 
 public class TestRunner {
