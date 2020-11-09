@@ -328,10 +328,7 @@
   </snapshots>
 </repository>
 
-<snapshotRepository>
-        <id>my-repo-bucket-snapshot</id>
-        <url>https://cyclosstorage.blob.core.windows.net/snapshot</url>
-    </snapshotRepository>
+
     <repository>
         <id>my-repo-bucket-release</id>
         <url>https://cyclosstorage.blob.core.windows.net/release</url>
