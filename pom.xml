@@ -302,6 +302,11 @@
 			<artifactId>mockito-all</artifactId>
 			<version>1.10.19</version>
 		</dependency>
+		<dependency>
+  <groupId>sqs.frameworks</groupId>
+  <artifactId>bdd.cucumber</artifactId>
+  <version>1.1-SNAPSHOT</version>
+</dependency>
 
 <dependency>
     <groupId>org.apache.maven.plugins</groupId>
