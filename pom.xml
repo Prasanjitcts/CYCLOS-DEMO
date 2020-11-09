@@ -311,6 +311,20 @@
 </dependency>
 
 	</dependencies>
+
+	<distributionManagement>
+  <snapshotRepository>
+    <id>cyclosstorage</id>
+    <url>bs://cyclosstorage/snapshot</url>
+  </snapshotRepository>
+  <repository>
+    <id>cyclosstorage</id>
+    <url>bs://cyclosstorage/release</url>
+  </repository>
+</distributionManagement>
+
+
+
  <distributionManagement> 
 <repository>
   <id>cycloss</id>
@@ -600,6 +614,14 @@
 
 
 		</plugins>
+
+		<extensions>
+    <extension>
+      <groupId>com.gkatzioura.maven.cloud</groupId>
+      <artifactId>azure-storage-wagon</artifactId>
+      <version>1.8</version>
+    </extension>
+  </extensions>
 
 	</build>
 </project>
