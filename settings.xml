@@ -10,11 +10,7 @@
     </server>
 
 
- <server>
-    <id>my-repo-bucket-snapshot</id>
-    <username>cyclosstorage</username>
-    <password>yuDxQ3Z5qUbO+1qVRbO4Q1eVhoxPuRfx5ST45gbKTKxIxZ887U7NI8LZho9dQBwXZSoEiccCmOIA0DUjenOaFQ==</password>
-  </server>
+ 
   <server>
     <id>my-repo-bucket-release</id>
     <username>cyclosstorage</username>
