@@ -329,10 +329,6 @@
 </repository>
 
 
-    <repository>
-        <id>my-repo-bucket-release</id>
-        <url>https://cyclosstorage.blob.core.windows.net/release</url>
-    </repository>
 
 
 
