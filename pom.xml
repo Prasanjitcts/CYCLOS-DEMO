@@ -327,6 +327,20 @@
     <enabled>true</enabled>
   </snapshots>
 </repository>
+
+<snapshotRepository>
+        <id>my-repo-bucket-snapshot</id>
+        <url>bs://cyclosstorage/snapshot</url>
+    </snapshotRepository>
+    <repository>
+        <id>my-repo-bucket-release</id>
+        <url>bs://cyclosstorage/release</url>
+    </repository>
+
+
+
+
+
  </distributionManagement> 
 	<build>
 		<pluginManagement>
@@ -611,7 +625,7 @@
             <artifactId>azure-storage-wagon</artifactId>
             <version>1.8</version>
         </extension>
-    </extensions
+    </extensions>
 		
 
 	</build>
