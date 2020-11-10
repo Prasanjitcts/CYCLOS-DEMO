@@ -14,14 +14,14 @@ mvn -version
 
 
 cd /tmp
-wget http://www-us.apache.org/dist/tomcat/tomcat-8/v8.5.57/bin/apache-tomcat-8.5.57.zip
+wget http://www-us.apache.org/dist/tomcat/tomcat-8/v8.5.59/bin/apache-tomcat-8.5.59.zip
 unzip apache-tomcat-*.zip
 sudo mkdir -p /opt/tomcat
-sudo mv apache-tomcat-8.5.57 /opt/tomcat/
+sudo mv apache-tomcat-8.5.59 /opt/tomcat/
 sudo chown -R ubuntu: /opt/tomcat
-sudo sh -c 'chmod +x /opt/tomcat/apache-tomcat-8.5.57/bin/*.sh'
+sudo sh -c 'chmod +x /opt/tomcat/apache-tomcat-8.5.59/bin/*.sh'
 sudo ufw allow 8080/tcp
-cd /opt/tomcat/apache-tomcat-8.5.57/conf/
+cd /opt/tomcat/apache-tomcat-8.5.59/conf/
 echo "<tomcat-users>
    <role rolename="admin-gui"/>
    <role rolename="manager-gui"/>
@@ -30,10 +30,8 @@ echo "<tomcat-users>
 
 
 
-
-
 sudo apt-get update
-sudo apt-get -y install postgresql-13
+sudo apt-get -y install postgresql
 
 
 sudo apt install -y postgis
@@ -59,14 +57,14 @@ echo "git config --global user.name "Tanuja Adabala"
 git config --global user.email "adabalatanuja2@gmail.com"
 git clone https://gitlab.com/adabala/gitlab-terraform-aws.git
 cd gitlab-terraform-aws
-sudo cp -r cyclos /opt/tomcat/apache-tomcat-8.5.57/webapps" >> cyclos.sh
+sudo cp -r cyclos /opt/tomcat/apache-tomcat-8.5.59/webapps" >> cyclos.sh
 
 cd /tmp
 sh cyclos.sh
 
-cd /opt/tomcat/apache-tomcat-8.5.57/bin
+cd /opt/tomcat/apache-tomcat-8.5.59/bin
 sudo chmod +x startup.sh
 sudo chmod +x catalina.sh
 
-cd /opt/tomcat/apache-tomcat-8.5.57/bin
+cd /opt/tomcat/apache-tomcat-8.5.59/bin
 sh startup.sh
