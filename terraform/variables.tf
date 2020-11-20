@@ -22,7 +22,7 @@ variable "publisher" {}
 variable "offer" {}
 variable "sku" {}
 variable "NSG_Name" {}
-variable "inbound_port_ranges" {type = "string"}
+variable "inbound_port_ranges" {type = string}
 
 variable "computer_name" {}
 variable "admin_username" {}
