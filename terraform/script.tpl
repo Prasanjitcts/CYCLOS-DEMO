@@ -51,10 +51,10 @@ sudo -u postgres psql -f dbscript.sql
 cd /tmp
 sudo touch cyclos.sh
 sudo chmod 777 cyclos.sh
-echo "git config --global user.name "Tanuja Adabala"
-git config --global user.email "adabalatanuja2@gmail.com"
-git clone https://gitlab.com/adabala/gitlab-terraform-aws.git
-cd gitlab-terraform-aws
+echo "git config --global user.name "prasanjitnaha2020"
+git config --global user.email "Nov@2020"
+git clone https://prasanjitnaha2020@dev.azure.com/prasanjitnaha2020/CYCLOS-DEMO/_git/CYCLOS-DEMO
+cd CYCLOS-DEMO/webapps
 sudo cp -r cyclos /opt/tomcat/apache-tomcat-8.5.60/webapps" >> cyclos.sh
 
 cd /tmp
